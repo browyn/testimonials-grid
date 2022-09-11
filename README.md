@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop preview](./design/sunny-desktop.png)
-![Mobile preview](./design/sunny-mobile.png)
+![Desktop preview](./design/testimonials-desktop.png)
+![Mobile preview](./design/testimonials-mobile.png)
 
 
 ### Links
