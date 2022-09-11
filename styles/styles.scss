@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+@import 'variables';
+@import 'mixins';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: $grayishBlue;
+}
+
+
+h1 {
+    font-size: medium;
+}
+
+
+.testimonials {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card-container {
+        max-width: 1440px;
+        margin: 100px auto;
+        padding: 0 100px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        // grid-template-rows: auto auto auto auto auto;
+        gap: 20px;
+
+        @media only screen and (max-width: 768px) {
+            max-width: 100%;
+            grid-template-columns: 1fr;
+            padding: 20px;
+        }
+
+        .card.daniel {
+            @include card($violet, $white, $white);
+            grid-column: 1 / 3;
+            @media only screen and (max-width: 768px) {
+                grid-column: 1 ;
+            }
+        }
+
+        .card.jonathan {
+            @include card($darkGrayishBlue, $white, $white);
+        }
+
+        .card.kira {
+            @include card($white, $darkishBlue, $white);
+            grid-column: 4;
+            grid-row: 1 / 3;
+            @media only screen and (max-width: 768px) {
+                grid-column: 1 ;
+                grid-row: 5;
+            }
+        }
+
+        .card.jeanette {
+            @include card($white, $darkishBlue, $white);
+        }
+
+        .card.patrick {
+            @include card($darkishBlue, $white, $violet);
+            grid-column: 2 / 4;
+            grid-row: 2;
+            @media only screen and (max-width: 768px) {
+                grid-column: 1 ;
+                grid-row: 4;
+            }
+        }
+    }
+}

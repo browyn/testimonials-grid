@@ -1,0 +1,39 @@
+@mixin card($backgroundColor, $textColor, $imageBorderColor) {
+    
+        padding: 20px;
+        border-radius: 5px;
+        background-color: $backgroundColor;
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            img {
+                width: 30px;
+                border-radius: 50%;
+                border: 1px solid $imageBorderColor;
+                margin-right: 20px;
+            }
+
+            p.name {
+                color: $textColor;
+                small.status {
+                    opacity: 50%;
+                }
+            }
+        }
+
+        .card-body {
+            h1.heading {
+                color: $textColor;
+                font-size: 1.2rem;
+                margin: 20px 0px;
+            }
+            small.details {
+                color: $textColor;
+                font-size: 15px;
+                opacity: 70%;
+            }
+        }
+   
+}
+
