@@ -43,6 +43,9 @@ h1 {
         .card.daniel {
             @include card($violet, $white, $white);
             grid-column: 1 / 3;
+            background-image: url('../images/bg-pattern-quotation.svg');
+            background-repeat: no-repeat;
+            background-position: top right 80px;
             @media only screen and (max-width: 768px) {
                 grid-column: 1 ;
             }
